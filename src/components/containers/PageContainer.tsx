@@ -1,7 +1,7 @@
 const PageContainer = ({ children }) => {
 	return (
 		<>
-			<div class="max-w-[1500px] min-w-[1000px] w-8/10 h-8/10 flex flex-col">
+			<div class="overflow-y-scroll aspect-16/9 m-5 flex flex-col max-md:h-[150vh] max-md:w-10/10 ">
 				{children}
 			</div>
 		</>

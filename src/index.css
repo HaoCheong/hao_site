@@ -3,8 +3,10 @@
 @theme {
   --font-jersey: 'Jersey 15', 'sans-serif';
 }
-:root {
+#root {
   background-color: black;
+  height: 100vh;
+  width: 100vw;
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

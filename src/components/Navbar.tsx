@@ -14,8 +14,8 @@ const Navbar = () => {
 				<div class="grid col-span-6 gap-5 w-full h-full  max-md:hidden">
 					<div class="flex flex-row gap-5 w-full h-full">
 						<Button
-							label="home/"
-							outerStyle="min-w-[100px] min-h-10 w-full"
+							label="/home"
+							outerStyle="min-w-[100px] max-w-[200px] max-h-[100px] min-h-10 w-full"
 							innerStyle="border-white bg-black"
 							onClick={() => {
 								alert("HOME");
@@ -23,8 +23,8 @@ const Navbar = () => {
 							active={location.pathname === "/Home"}
 						/>
 						<Button
-							label="projects/"
-							outerStyle="min-w-[100px] min-h-10 w-full"
+							label="/projects"
+							outerStyle="min-w-[100px] max-w-[200px] max-h-[100px] min-h-10 w-full"
 							innerStyle="border-white bg-green-500"
 							onClick={() => {
 								alert("PROJECTS");
@@ -32,8 +32,8 @@ const Navbar = () => {
 							active={location.pathname === "/Projects"}
 						/>
 						<Button
-							label="work/"
-							outerStyle="min-w-[100px] min-h-10 w-full"
+							label="/work"
+							outerStyle="min-w-[100px] max-w-[200px] max-h-[100px] min-h-10 w-full"
 							innerStyle="border-white bg-black"
 							onClick={() => {
 								alert("work");

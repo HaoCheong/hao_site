@@ -71,7 +71,7 @@ const Home = () => {
 					<div class="p-4 col-span-16 row-span-4 text-white text-5xl font-jersey flex justify-center max-md:col-span-1 max-md:row-span-4 max-md:border-solid max-md:border-t-[#3b3b3b] max-md:border-t-1">
 						<p
 							id="summary-webpage"
-							class="font-jersey text-4xl text-white w-full max-md:hidden overflow-y-scroll"
+							class="font-jersey text-[clamp(1rem,2vw,1em)] text-white w-full max-md:hidden overflow-y-scroll"
 						>
 							I am a Software Engineer currently based in{" "}
 							<span class="text-[#3366cc] underline">
@@ -86,7 +86,7 @@ const Home = () => {
 						</p>
 						<p
 							id="summary-webpage"
-							class="font-jersey text-4xl text-white w-full md:hidden"
+							class="font-jersey text-[0.85em] text-white w-full md:hidden"
 						>
 							I am a Software Engineer based in{" "}
 							<span class="text-[#3366cc] underline">
@@ -105,7 +105,7 @@ const Home = () => {
 						<div class="flex flex-col gap-5">
 							<Button
 								label="Application Programmer @ Kanji IT"
-								outerStyle="w-full p-10"
+								outerStyle="w-full h-10 p-10"
 								innerStyle="border-white bg-green-500"
 								onClick={() => {
 									alert("email");

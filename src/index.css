@@ -8,6 +8,26 @@
   height: 100vh;
   width: 100vw;
 }
+
+#page-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#page-container::-webkit-scrollbar {
+  display: none;
+}
+
+#summary-webpage {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#summary-webpage::-webkit-scrollbar {
+  display: none;
+}
+
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

@@ -2,7 +2,7 @@ import PageContainer from "../components/containers/PageContainer";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-const Work = () => {
+const Flag = () => {
 	return (
 		<>
 			<PageContainer>
@@ -20,7 +20,7 @@ const Work = () => {
 					</div>
 					<div class="p-4 col-span-14 row-span-4 text-white text-5xl font-jersey flex items-center justify-center max-md:col-span-1 max-md:row-span-1">
 						<h1 class="font-jersey text-9xl text-white text-center max-md:text-8xl">
-							work/
+							Are one of my cybersecurity student perhaps?
 						</h1>
 					</div>
 				</div>
@@ -30,4 +30,4 @@ const Work = () => {
 	);
 };
 
-export default Work;
+export default Flag;

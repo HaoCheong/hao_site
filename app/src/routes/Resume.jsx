@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 
-const Projects = () => {
+const Resume = () => {
 	return (
 		<Page>
 			<Navbar />
@@ -12,4 +12,4 @@ const Projects = () => {
 	);
 };
 
-export default Projects;
+export default Resume;

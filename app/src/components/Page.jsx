@@ -14,8 +14,8 @@ const Page = ({ children }) => {
 				<div
 					id="page-content"
 					className={clsx(
-						"h-14/16 w-10/16 border-5 border-solid border-white p-8",
-						"max-md:h-full max-md:w-14/16 max-md:p-0"
+						"h-15/16 w-10/16 max-w-[1200px] max-h-[1000px] rounded-xl bg-hao-background/40 backdrop-blur-[12px] shadow-2xl p-8",
+						"max-md:size-full max-md:rounded-none max-md:p-0"
 					)}
 				>
 					{children}

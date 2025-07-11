@@ -3,7 +3,7 @@ import clsx from "clsx";
 const Button = ({
 	label = "Test",
 	onClick,
-	innerStyle = "border-hao-text bg-hao-background",
+	innerStyle = "border-hao-text font-jersey bg-hao-background",
 	active = false,
 }) => {
 	const buttonStyle =
@@ -16,7 +16,7 @@ const Button = ({
 				id="button"
 				className={clsx(
 					buttonShape,
-					"relative group transition duration-200 items-center size-full text-xl rounded-xl"
+					"relative group transition duration-200 items-center size-full text-2xl rounded-xl"
 				)}
 				onClick={onClick}
 			>
@@ -31,7 +31,7 @@ const Button = ({
 				{active ? (
 					<div
 						className={clsx(
-							"top-2 left-2 bg-hao-secondary/90",
+							"top-2 left-2 bg-hao-secondary",
 							buttonStyle,
 							buttonShape,
 							innerStyle

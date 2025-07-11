@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-hao-text: #eff0ee;
+    --color-hao-background: #12160f;
+    --color-hao-primary: #6cc030;
+    --color-hao-secondary: #4d7333;
+    --color-hao-accent: #7dc34c;
+
+}

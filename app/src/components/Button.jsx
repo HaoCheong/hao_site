@@ -3,7 +3,7 @@ import clsx from "clsx";
 const Button = ({
 	label = "Test",
 	onClick,
-	innerStyle = "border-hao-text font-jersey bg-hao-background",
+	innerStyle = "border-hao-text font-sora bg-hao-background",
 	active = false,
 }) => {
 	const buttonStyle =
@@ -16,7 +16,7 @@ const Button = ({
 				id="button"
 				className={clsx(
 					buttonShape,
-					"relative group transition duration-200 items-center size-full text-2xl rounded-xl"
+					"relative group transition duration-200 items-center size-full text-xl rounded-xl"
 				)}
 				onClick={onClick}
 			>
@@ -24,14 +24,14 @@ const Button = ({
 					id="button-backdrop"
 					className={clsx(
 						buttonShape,
-						"absolute top-2 left-2 w-full h-full border-2 border-hao-text bg-hao-text/80 transition duration-100 "
+						"absolute top-2 left-2 w-full h-full border-2 border-hao-text bg-hao-text transition duration-100 "
 					)}
 				></div>
 
 				{active ? (
 					<div
 						className={clsx(
-							"top-2 left-2 bg-hao-secondary",
+							"top-2 left-2 bg-hao-accent",
 							buttonStyle,
 							buttonShape,
 							innerStyle
@@ -44,7 +44,7 @@ const Button = ({
 						className={clsx(
 							buttonStyle,
 							buttonShape,
-							"top-0 left-0 group-active:top-2 group-active:left-2 duration-100 ease-in-out hover:bg-hao-secondary hover:text-hao-text",
+							"top-0 left-0 group-active:top-2 group-active:left-2 duration-100 ease-in-out hover:bg-hao-accent hover:text-hao-text",
 							innerStyle
 						)}
 					>

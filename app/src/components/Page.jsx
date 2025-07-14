@@ -5,7 +5,7 @@ const Page = ({ children }) => {
 	return (
 		<div
 			id="root-background"
-			className="block w-screen h-screen bg-[url(/src/assets/page-background-2.svg)] bg-cover"
+			className="block w-screen h-screen bg-[url(/src/assets/page-background-3.svg)] bg-cover"
 		>
 			<div
 				id="page-container"
@@ -14,7 +14,7 @@ const Page = ({ children }) => {
 				<div
 					id="page-content"
 					className={clsx(
-						"h-15/16 w-10/16 max-w-[1200px] max-h-[1000px] rounded-xl bg-hao-background/40 backdrop-blur-[12px] shadow-2xl p-8",
+						"h-15/16 w-10/16 max-w-max-xl max-h-max-xl rounded-xl bg-hao-background/40 backdrop-blur-[12px] shadow-2xl p-8",
 						"max-md:size-full max-md:rounded-none max-md:p-0"
 					)}
 				>

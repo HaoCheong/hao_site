@@ -7,7 +7,7 @@ const Navbar = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div id="navigation-bar" className="h-3/20 w-full flex flex-row p-4">
+		<div id="navigation-bar" className="h-2/20 w-full flex flex-row p-4">
 			<div
 				id="nav-title-section"
 				className={clsx(
@@ -17,7 +17,7 @@ const Navbar = () => {
 			>
 				<h1
 					id="title"
-					className={clsx("text-8xl text-white font-jersey")}
+					className={clsx("text-8xl text-white font-sora")}
 				>
 					Hao.Hao
 				</h1>

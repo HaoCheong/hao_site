@@ -4,17 +4,19 @@ import Page from "../components/Page";
 const Projects = () => {
 	return (
 		<Page>
-			<div id="project-mobile-page" className="md:hidden">
+			<div
+				id="project-mobile-page"
+				className="2xl:hidden size-full overflow-y-scroll"
+			>
 				MOBILE
 			</div>
 
-			<div id="project-desktop-page" className="max-md:hidden">
-				DESKTOP
+			<div id="project-desktop-page" className="max-2xl:hidden size-full">
+				<Navbar />
+				<div className="w-full h-17/20 flex justify-center items-center flex-col gap-4">
+					Test
+				</div>
 			</div>
-			{/* <Navbar />
-			<div className="w-full h-17/20 flex justify-center items-center flex-col gap-4">
-				Test
-			</div> */}
 		</Page>
 	);
 };

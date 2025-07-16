@@ -1,7 +1,6 @@
+import clsx from "clsx";
 import { useLocation, useNavigate } from "react-router";
 import Button from "./Button";
-import clsx from "clsx";
-import React from "react";
 const Navbar = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -31,24 +30,28 @@ const Navbar = () => {
 			>
 				<Button
 					onClick={() => navigate("/Home")}
-					label="/home"
 					active={location.pathname === "/Home"}
-				/>
+				>
+					/home
+				</Button>
 				<Button
 					onClick={() => navigate("/Projects")}
-					label="/project"
 					active={location.pathname === "/Projects"}
-				/>
+				>
+					/project
+				</Button>
 				<Button
 					onClick={() => navigate("/Work")}
-					label="/work"
 					active={location.pathname === "/Work"}
-				/>
+				>
+					/work
+				</Button>
 				<Button
 					onClick={() => navigate("/Resume")}
-					label="/resume"
 					active={location.pathname === "/Resume"}
-				/>
+				>
+					/resume
+				</Button>
 			</div>
 		</div>
 	);

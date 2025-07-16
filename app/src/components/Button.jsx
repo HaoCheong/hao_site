@@ -1,9 +1,9 @@
 import clsx from "clsx";
 
 const Button = ({
-	label = "Test",
+	children,
 	onClick,
-	innerStyle = "border-hao-text font-sora bg-hao-background",
+	innerStyle = "border-hao-text",
 	active = false,
 }) => {
 	const buttonStyle =
@@ -37,18 +37,18 @@ const Button = ({
 							innerStyle
 						)}
 					>
-						{label}
+						{children}
 					</div>
 				) : (
 					<div
 						className={clsx(
 							buttonStyle,
 							buttonShape,
-							"top-0 left-0 group-active:top-2 group-active:left-2 duration-100 ease-in-out hover:bg-hao-accent hover:text-hao-text",
+							"bg-hao-background top-0 left-0 group-active:top-2 group-active:left-2 duration-100 ease-in-out hover:bg-hao-accent hover:text-hao-text",
 							innerStyle
 						)}
 					>
-						{label}
+						{children}
 					</div>
 				)}
 			</button>

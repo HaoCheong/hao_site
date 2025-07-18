@@ -1,12 +1,12 @@
 import clsx from "clsx";
+import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 import Placeholder from "../components/Placeholder";
-import Button from "../components/Button";
 
 const Home = () => {
 	const SUMMARY =
-		"I am a Software Engineer based out of Sydney, working since 2022. But had an obsession with anything computer, from making stuff to breaking stuff";
+		"I'm a Sydney-based Software Engineer, turning a lifelong obsession with computers into a career since 2022. Building, breaking, and still always learning.";
 
 	return (
 		<Page>
@@ -45,7 +45,7 @@ const Home = () => {
 							"p-4 size-full flex flex-col justify-center items-center "
 						)}
 					>
-						<p className="text-3xl font-sora text-hao-text text-center">
+						<p className="text-sm font-sora text-hao-text text-center">
 							{SUMMARY}
 						</p>
 					</div>
@@ -146,7 +146,7 @@ const Home = () => {
 							"p-4 w-8/10 h-full flex flex-row justify-center items-center rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						)}
 					>
-						<p className="text-3xl font-sora text-hao-background text-center">
+						<p className="text-2xl font-sora text-hao-background text-center">
 							{SUMMARY}
 						</p>
 					</div>
@@ -174,22 +174,33 @@ const Home = () => {
 							Contact
 						</h1>
 						<Button
-							label="hao.cheong@outlook.com"
 							onClick={(e) => {
 								window.location.href =
 									"mailto:hao.cheong@outlook.com";
 								e.preventDefault();
 							}}
-						/>
+						>
+							hao.cheong@outlook.com
+						</Button>
 
 						<Button
-							label="LinkedIn"
 							onClick={(e) => {
 								window.location.href =
 									"https://www.linkedin.com/in/hao-cheong/";
 								e.preventDefault();
 							}}
-						/>
+						>
+							<div
+								id="linkedin-group"
+								className="flex flex-row gap-2 items-center p-3"
+							>
+								<img
+									src="/src/assets/linkedin-logo.png"
+									className="h-5 w-auto aspect-square invert"
+								/>
+								<h2 className="h-full w-1/2">LinkedIn</h2>
+							</div>
+						</Button>
 						<Button
 							label="github"
 							onClick={(e) => {
@@ -197,7 +208,9 @@ const Home = () => {
 									"https://github.com/HaoCheong";
 								e.preventDefault();
 							}}
-						/>
+						>
+							GitHub
+						</Button>
 					</div>
 				</div>
 				<div

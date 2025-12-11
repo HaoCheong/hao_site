@@ -7,7 +7,7 @@ const Button = ({
 	active = false,
 }) => {
 	const buttonStyle =
-		"absolute flex items-center justify-center w-full h-full border-2 text-hao-text font-bold transition-all duration-100 ";
+		"absolute flex flex-col items-center justify-center w-full h-full border-2 text-hao-text font-bold transition-all duration-100 ";
 	const buttonShape = "rounded-xl";
 
 	return (

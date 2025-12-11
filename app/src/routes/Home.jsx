@@ -3,8 +3,11 @@ import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 import Placeholder from "../components/Placeholder";
+import { useNavigate } from "react-router";
 
 const Home = () => {
+	const navigate = useNavigate();
+
 	const SUMMARY =
 		"I'm a Sydney-based Software Engineer, turning a lifelong obsession with computers into a career since 2022. Building, breaking, and still always learning.";
 
@@ -162,9 +165,30 @@ const Home = () => {
 						<h1 className="text-4xl text-hao-text font-sora">
 							Work Experience
 						</h1>
-						<Button label="Application Programmer - Kanji IT Pty (Since 2023)" />
-						<Button label="Web Application Tutor - UNSW - (2022-2024)" />
-						<Button label="Cyber Security Tutor - UNSW - (2022-2024)" />
+						<Button
+							onClick={() => {
+								navigate("/Work");
+							}}
+						>
+							<h1>
+								Application Programmer - Kanji IT Pty - (2023 -
+								Current)
+							</h1>
+						</Button>
+						<Button
+							onClick={() => {
+								navigate("/Work");
+							}}
+						>
+							<h1>Web Application Tutor - UNSW - (2022-2024)</h1>
+						</Button>
+						<Button
+							onClick={() => {
+								navigate("/Work");
+							}}
+						>
+							<h1>Cyber Security Tutor - UNSW - (2022-2024)</h1>
+						</Button>
 					</div>
 					<div
 						id="action-contact-section"
@@ -180,7 +204,18 @@ const Home = () => {
 								e.preventDefault();
 							}}
 						>
-							hao.cheong@outlook.com
+							<div
+								id="email-group"
+								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
+							>
+								<img
+									src="/src/assets/mail.png"
+									className="min-w-[30px] max-w-[45px] aspect-square invert"
+								/>
+								<h2 className="h-full w-8/10 flex flex-col justify-center">
+									hao.cheong@outlook.com
+								</h2>
+							</div>
 						</Button>
 
 						<Button
@@ -192,13 +227,15 @@ const Home = () => {
 						>
 							<div
 								id="linkedin-group"
-								className="flex flex-row gap-2 items-center p-3"
+								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
 							>
 								<img
 									src="/src/assets/linkedin-logo.png"
-									className="h-5 w-auto aspect-square invert"
+									className="min-w-[30px] max-w-[45px] aspect-square invert"
 								/>
-								<h2 className="h-full w-1/2">LinkedIn</h2>
+								<h2 className="h-full w-8/10 flex flex-col justify-center">
+									LinkedIn
+								</h2>
 							</div>
 						</Button>
 						<Button
@@ -209,7 +246,18 @@ const Home = () => {
 								e.preventDefault();
 							}}
 						>
-							GitHub
+							<div
+								id="github-group"
+								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
+							>
+								<img
+									src="/src/assets/github-sign.png"
+									className="min-w-[30px] max-w-[45px] aspect-square invert"
+								/>
+								<h2 className="h-full w-8/10 flex flex-col justify-center">
+									GitHub
+								</h2>
+							</div>
 						</Button>
 					</div>
 				</div>

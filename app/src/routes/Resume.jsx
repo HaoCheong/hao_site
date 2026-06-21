@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import Navbar from "../components/Navbar";
 import Page from "../components/Page";
+import logoAnimated from "../assets/logo-animated.gif";
+import resumePdf from "../assets/Hao_Cheong_Resume.pdf";
 
 const Resume = () => {
 	return (
@@ -33,7 +35,7 @@ const Resume = () => {
 						className={clsx("p-4 w-6/10 h-full flex flex-row")}
 					>
 						<img
-							src="/src/assets/logo-animated.gif"
+							src={logoAnimated}
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
 						<div className="w-full flex justify-center items-center">
@@ -52,7 +54,7 @@ const Resume = () => {
 					<embed
 						id="resume"
 						class="h-full w-6/10"
-						src="src/assets/Hao_Cheong_Resume.pdf"
+						src={resumePdf}
 					/>
 				</div>
 				<div

@@ -4,6 +4,11 @@ import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 import Placeholder from "../components/Placeholder";
 import { useNavigate } from "react-router";
+import logoAnimated from "../assets/logo-animated.gif";
+import mailIcon from "../assets/mail.png";
+import linkedinLogo from "../assets/linkedin-logo.png";
+import githubSign from "../assets/github-sign.png";
+import chevronDown from "../assets/chevron-down.svg";
 
 const Home = () => {
 	const navigate = useNavigate();
@@ -28,7 +33,7 @@ const Home = () => {
 						className={clsx("p-4 size-full flex flex-col")}
 					>
 						<img
-							src="/src/assets/logo-animated.gif"
+							src={logoAnimated}
 							className="h-8/10 p-3 aspect-square object-contain"
 						/>
 						<div className="w-full h-2/10 flex justify-center items-center p-2">
@@ -55,7 +60,7 @@ const Home = () => {
 				</div>
 				<div id="nav-more-indicator" className="w-full h-2/20">
 					<img
-						src="/src/assets/chevron-down.svg"
+						src={chevronDown}
 						className="size-full object-fill"
 						preserveAspectRatio="none"
 					/>
@@ -140,7 +145,7 @@ const Home = () => {
 						className={clsx("p-4 w-6/10 h-full flex flex-row")}
 					>
 						<img
-							src="/src/assets/logo-animated.gif"
+							src={logoAnimated}
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
 						<div className="w-full flex justify-center items-center">
@@ -217,7 +222,7 @@ const Home = () => {
 								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
 							>
 								<img
-									src="/src/assets/mail.png"
+									src={mailIcon}
 									className="min-w-[30px] max-w-[45px] aspect-square invert"
 								/>
 								<h2 className="h-full w-8/10 flex flex-col justify-center">
@@ -238,7 +243,7 @@ const Home = () => {
 								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
 							>
 								<img
-									src="/src/assets/linkedin-logo.png"
+									src={linkedinLogo}
 									className="min-w-[30px] max-w-[45px] aspect-square invert"
 								/>
 								<h2 className="h-full w-8/10 flex flex-col justify-center">
@@ -259,7 +264,7 @@ const Home = () => {
 								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
 							>
 								<img
-									src="/src/assets/github-sign.png"
+									src={githubSign}
 									className="min-w-[30px] max-w-[45px] aspect-square invert"
 								/>
 								<h2 className="h-full w-8/10 flex flex-col justify-center">

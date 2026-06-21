@@ -1,11 +1,13 @@
 import clsx from "clsx";
 import Navbar from "./Navbar";
+import pageBg from "../assets/page-background-3.svg";
 
 const Page = ({ children }) => {
 	return (
 		<div
 			id="root-background"
-			className="block w-screen h-screen bg-[url(/src/assets/page-background-3.svg)] bg-cover"
+			className="block w-screen h-screen bg-cover"
+			style={{ backgroundImage: `url(${pageBg})` }}
 		>
 			<div
 				id="page-container"

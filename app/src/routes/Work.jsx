@@ -2,6 +2,7 @@ import clsx from "clsx";
 import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 import WorkCard from "../components/WorkCard";
+import logoAnimated from "../assets/logo-animated.gif";
 
 const Work = () => {
 	const workList = [
@@ -73,7 +74,7 @@ const Work = () => {
 						className={clsx("p-4 w-6/10 h-full flex flex-row")}
 					>
 						<img
-							src="/src/assets/logo-animated.gif"
+							src={logoAnimated}
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
 						<div className="w-full flex justify-center items-center">

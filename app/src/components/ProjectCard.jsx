@@ -13,17 +13,64 @@ const ProjectCard = ({ key, project }) => {
 				>
 					<div
 						id="project-card-image"
-						className="w-2/16 aspect-square h-full bg-red-500"
-					></div>
+						className="w-2/16 aspect-square h-full"
+					>
+						{project?.logo_link === "" ? (
+							<div className="text-8xl">
+								{project.logo_placeholder}
+							</div>
+						) : (
+							<img
+								src={project.logo_link}
+								className="w-full h-full"
+							/>
+						)}
+					</div>
+					<div id="project-card-header" className="h-full w-3/16">
+						<h1 className="text-hao-text font-space-mono text-xl">
+							<b>Project: </b>
+							{project.title}
+						</h1>
+					</div>
 					<div
 						id="project-card-content"
-						className="h-full w-12/16"
-					></div>
+						className="h-full w-8/16 m-5"
+					>
+						{project.notes.map((notes, id) => {
+							return (
+								<li
+									id="notes"
+									className="text-hao-text text-lg font-space-mono"
+								>
+									{notes}
+								</li>
+							);
+						})}
+					</div>
+					<div id="project-card-tech" className="h-full w-3/16 m-5">
+						{project.tech.map((notes, id) => {
+							return (
+								<li
+									id="tech"
+									className="text-hao-text text-lg font-space-mono"
+								>
+									{notes}
+								</li>
+							);
+						})}
+					</div>
 					<div
 						id="project-card-action"
 						className="h-full w-1/16 p-2 "
 					>
-						<Button>▶</Button>
+						<Button
+							onClick={(e) => {
+								window.open(project.link, "_blank").focus();
+								e.preventDefault();
+							}}
+						>
+							▶
+						</Button>
 					</div>
 				</div>
 			</div>

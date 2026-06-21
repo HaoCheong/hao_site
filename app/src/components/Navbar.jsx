@@ -11,21 +11,21 @@ const Navbar = () => {
 				id="nav-title-section"
 				className={clsx(
 					"w-5/10 h-full flex items-center",
-					"max-md:w-full max-md:justify-center max-md:items-center"
+					"max-md:w-full max-md:justify-center max-md:items-center",
 				)}
 			>
 				<h1
 					id="title"
-					className={clsx("text-8xl text-white font-sora")}
+					className={clsx("text-8xl text-white font-space-mono")}
 				>
-					Hao.Hao
+					/hao_site
 				</h1>
 			</div>
 			<div
 				id="nav-page-navigation"
 				className={clsx(
 					"w-5/10 h-full flex flex-row gap-4 items-center",
-					"max-md:hidden"
+					"max-md:hidden",
 				)}
 			>
 				<Button

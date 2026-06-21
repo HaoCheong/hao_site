@@ -9,7 +9,7 @@ const Home = () => {
 	const navigate = useNavigate();
 
 	const SUMMARY =
-		"I'm a Sydney-based Software Engineer, turning a lifelong obsession with computers into a career since 2022. Building, breaking, and still always learning.";
+		"i'm a sydney-based software engineer, breaking and making stuff and i don't plan to stop.";
 
 	return (
 		<Page>
@@ -17,7 +17,7 @@ const Home = () => {
 				id="project-mobile-page"
 				className="2xl:hidden size-full overflow-y-scroll"
 			>
-				<Placeholder label="Navbar" classSize="h-2/20 w-full" />
+				{/* <Placeholder label="Navbar" classSize="h-2/20 w-full" />
 
 				<div
 					id="home-mobile-landing-section"
@@ -32,8 +32,8 @@ const Home = () => {
 							className="h-8/10 p-3 aspect-square object-contain"
 						/>
 						<div className="w-full h-2/10 flex justify-center items-center p-2">
-							<h1 className="text-5xl text-hao-text text-center font-sora">
-								Hi, I'm Hao Cheong
+							<h1 className="text-5xl text-hao-text text-center font-space-mono">
+								hi, i'm hao cheong.
 							</h1>
 						</div>
 					</div>
@@ -45,10 +45,10 @@ const Home = () => {
 					<div
 						id="summary-central"
 						className={clsx(
-							"p-4 size-full flex flex-col justify-center items-center "
+							"p-4 size-full flex flex-col justify-center items-center ",
 						)}
 					>
-						<p className="text-sm font-sora text-hao-text text-center">
+						<p className="text-sm font-space-mono text-hao-text text-center">
 							{SUMMARY}
 						</p>
 					</div>
@@ -68,11 +68,11 @@ const Home = () => {
 						id="action-work-section"
 						className="flex flex-col gap-4 h-1/2 p-4"
 					>
-						<h1 className="text-4xl text-hao-text font-sora">
-							Work Experience
+						<h1 className="text-4xl text-hao-text font-space-mono">
+							work experience
 						</h1>
 						<Button
-							innerStyle="border-hao-text font-sora bg-hao-background p-2 text-md"
+							innerStyle="border-hao-text font-space-mono bg-hao-background p-2 text-md"
 							label="Application Programmer - Kanji IT Pty (Since 2023)"
 						/>
 						<Button label="Web Application Tutor - UNSW - (2022-2024)" />
@@ -82,8 +82,8 @@ const Home = () => {
 						id="action-contact-section"
 						className="flex flex-col gap-4 h-1/2 p-4"
 					>
-						<h1 className="text-4xl text-hao-text font-sora">
-							Contact
+						<h1 className="text-4xl text-hao-text font-space-mono">
+							contact
 						</h1>
 						<Button
 							label="hao.cheong@outlook.com"
@@ -111,6 +111,17 @@ const Home = () => {
 							}}
 						/>
 					</div>
+				</div> */}
+				<div
+					id="home-mobile-page"
+					className="2xl:hidden flex justify-center items-center h-screen m-3"
+				>
+					<h1
+						id="work-in-progress"
+						className="font-space-mono text-3xl text-hao-text text-center"
+					>
+						Home Page: currently a work in progress 🙇‍♂️
+					</h1>
 				</div>
 			</div>
 			<div
@@ -121,7 +132,7 @@ const Home = () => {
 				<div
 					id="home-desktop-landing-section"
 					className={clsx(
-						"w-full h-6/20 flex justify-center items-center"
+						"w-full h-6/20 flex justify-center items-center",
 					)}
 				>
 					<div
@@ -133,8 +144,8 @@ const Home = () => {
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
 						<div className="w-full flex justify-center items-center">
-							<h1 className="text-5xl p-4 text-hao-text text-center font-sora">
-								Hi, I'm Hao Cheong
+							<h1 className="text-5xl p-4 text-hao-text text-center font-space-mono">
+								hi, i'm hao cheong
 							</h1>
 						</div>
 					</div>
@@ -146,10 +157,10 @@ const Home = () => {
 					<div
 						id="summary-central"
 						className={clsx(
-							"p-4 w-8/10 h-full flex flex-row justify-center items-center rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
+							"p-4 w-8/10 h-full flex flex-row justify-center items-center rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary",
 						)}
 					>
-						<p className="text-2xl font-sora text-hao-background text-center">
+						<p className="text-2xl font-space-mono text-hao-background text-center">
 							{SUMMARY}
 						</p>
 					</div>
@@ -162,40 +173,37 @@ const Home = () => {
 						id="action-work-section"
 						className="flex flex-col gap-4 w-1/2 h-full p-4"
 					>
-						<h1 className="text-4xl text-hao-text font-sora">
-							Work Experience
+						<h1 className="text-4xl text-hao-text font-space-mono">
+							work experience
 						</h1>
 						<Button
 							onClick={() => {
 								navigate("/Work");
 							}}
 						>
-							<h1>
-								Application Programmer - Kanji IT Pty - (2023 -
-								Current)
-							</h1>
+							<h1>software engineer - atlassian</h1>
 						</Button>
 						<Button
 							onClick={() => {
 								navigate("/Work");
 							}}
 						>
-							<h1>Web Application Tutor - UNSW - (2022-2024)</h1>
+							<h1>application programmer - kanji it</h1>
 						</Button>
 						<Button
 							onClick={() => {
 								navigate("/Work");
 							}}
 						>
-							<h1>Cyber Security Tutor - UNSW - (2022-2024)</h1>
+							<h1>cyber security tutor - unsw</h1>
 						</Button>
 					</div>
 					<div
 						id="action-contact-section"
 						className="flex flex-col gap-4 w-1/2 h-full p-4"
 					>
-						<h1 className="text-4xl text-hao-text font-sora">
-							Contact
+						<h1 className="text-4xl text-hao-text font-space-mono">
+							contact
 						</h1>
 						<Button
 							onClick={(e) => {
@@ -234,7 +242,7 @@ const Home = () => {
 									className="min-w-[30px] max-w-[45px] aspect-square invert"
 								/>
 								<h2 className="h-full w-8/10 flex flex-col justify-center">
-									LinkedIn
+									linkedin
 								</h2>
 							</div>
 						</Button>
@@ -255,7 +263,7 @@ const Home = () => {
 									className="min-w-[30px] max-w-[45px] aspect-square invert"
 								/>
 								<h2 className="h-full w-8/10 flex flex-col justify-center">
-									GitHub
+									github
 								</h2>
 							</div>
 						</Button>

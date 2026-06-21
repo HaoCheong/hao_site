@@ -7,9 +7,14 @@ const Resume = () => {
 		<Page>
 			<div
 				id="resume-mobile-page"
-				className="2xl:hidden size-full overflow-y-scroll"
+				className="2xl:hidden  flex justify-center items-center h-screen m-3"
 			>
-				MOBILE
+				<h1
+					id="work-in-progress"
+					className="font-space-mono text-3xl text-hao-text text-center"
+				>
+					Resume Page: currently a work in progress 🙇‍♂️
+				</h1>
 			</div>
 
 			<div
@@ -20,7 +25,7 @@ const Resume = () => {
 				<div
 					id="resume-desktop-heading"
 					className={clsx(
-						"w-full h-6/20 flex justify-center items-center"
+						"w-full h-6/20 flex justify-center items-center",
 					)}
 				>
 					<div
@@ -32,8 +37,8 @@ const Resume = () => {
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
 						<div className="w-full flex justify-center items-center">
-							<h1 className="text-5xl p-4 text-hao-text text-center font-sora">
-								Here is my resume
+							<h1 className="text-5xl p-4 text-hao-text text-center font-space-mono">
+								here is my resume.
 							</h1>
 						</div>
 					</div>
@@ -41,13 +46,13 @@ const Resume = () => {
 				<div
 					id="resume-desktop-content"
 					className={clsx(
-						"w-full h-13/20 flex justify-center items-center"
+						"w-full h-13/20 flex justify-center items-center",
 					)}
 				>
 					<embed
 						id="resume"
 						class="h-full w-6/10"
-						src="/src/assets/sample.pdf"
+						src="src/assets/Hao_Cheong_Resume.pdf"
 					/>
 				</div>
 				<div

@@ -6,10 +6,19 @@ import WorkCard from "../components/WorkCard";
 const Work = () => {
 	const workList = [
 		{
+			company: "Atlassian",
+			title: "Software Engineer",
+			start_date: "Jan/2026",
+			end_date: "Current",
+			goals: [
+				"Java/Kotlin development for Server to Cloud App Migration",
+			],
+		},
+		{
 			company: "Kanji IT",
 			title: "Application Programmer",
 			start_date: "Jan/2023",
-			end_date: "Current",
+			end_date: "Jan/2026",
 			goals: [
 				"Django development for their delivery driver management system.",
 				"Full Stack application development for their automated SMS system with Internal interface for Support team",
@@ -30,7 +39,7 @@ const Work = () => {
 			title: "Web Frontend Tutor",
 			start_date: "Sept/2022",
 			end_date: "Jan/2024",
-			goals: ["Educatiung students on Frontend Fundamentals"],
+			goals: ["Educating students on Frontend Fundamentals"],
 		},
 	];
 
@@ -38,9 +47,14 @@ const Work = () => {
 		<Page>
 			<div
 				id="work-mobile-page"
-				className="2xl:hidden size-full overflow-y-scroll"
+				className="2xl:hidden flex justify-center items-center h-screen m-3"
 			>
-				MOBILE
+				<h1
+					id="work-in-progress"
+					className="font-space-mono text-3xl text-hao-text text-center"
+				>
+					Work Page: currently a work in progress 🙇‍♂️
+				</h1>
 			</div>
 
 			<div
@@ -51,7 +65,7 @@ const Work = () => {
 				<div
 					id="work-desktop-heading"
 					className={clsx(
-						"w-full h-6/20 flex justify-center items-center"
+						"w-full h-6/20 flex justify-center items-center",
 					)}
 				>
 					<div
@@ -63,8 +77,8 @@ const Work = () => {
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
 						<div className="w-full flex justify-center items-center">
-							<h1 className="text-5xl p-4 text-hao-text text-center font-sora">
-								Work I have done
+							<h1 className="text-5xl p-4 text-hao-text text-center font-space-mono">
+								work i have done.
 							</h1>
 						</div>
 					</div>
@@ -72,7 +86,7 @@ const Work = () => {
 				<div
 					id="work-desktop-content"
 					className={clsx(
-						"w-full h-13/20 flex flex-col p-4 gap-8 overflow-y-scroll"
+						"w-full h-13/20 flex flex-col p-4 gap-8 overflow-y-scroll",
 					)}
 				>
 					{workList.map((work, id) => {

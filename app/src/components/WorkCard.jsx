@@ -11,27 +11,23 @@ const WorkCard = ({ key, work }) => {
 					id="work-card-content"
 					className="flex flex-row justify-center items-center gap-4 h-full p-2"
 				>
-					<div
-						id="work-card-image"
-						className="w-2/16 aspect-square h-full bg-red-500"
-					></div>
-					<div id="work-card-brief" className="h-full w-5/16">
+					<div id="work-card-brief" className="h-full w-7/16">
 						<div id="work-heading" className="flex flex-col gap-2">
 							<h1
 								id="work-company"
-								className="text-xl text-hao-text h-full"
+								className="text-xl text-hao-text h-full font-space-mono"
 							>
 								<b>Company:</b> {work.company}
 							</h1>
 							<h2
 								id="work-title"
-								className="text-xl text-hao-text h-full"
+								className="text-xl text-hao-text h-full font-space-mono"
 							>
 								<b>Title:</b> {work.title}
 							</h2>
 							<h3
 								id="work-title"
-								className="text-md text-hao-text h-full"
+								className="text-md text-hao-text h-full font-space-mono"
 							>
 								{work.start_date} - {work.end_date}
 							</h3>
@@ -39,23 +35,20 @@ const WorkCard = ({ key, work }) => {
 					</div>
 					<div
 						id="work-card-details"
-						className="h-full w-8/16 overflow-y-scroll"
+						className="h-full w-9/16 overflow-y-scroll"
 					>
 						<ul className="list-disc list-inside">
 							{work.goals.map((goal, id) => {
 								return (
 									<li
 										id="goal"
-										className="text-hao-text text-lg"
+										className="text-hao-text text-lg font-space-mono"
 									>
 										{goal}
 									</li>
 								);
 							})}
 						</ul>
-					</div>
-					<div id="work-card-action" className="h-full w-1/16 p-2 ">
-						<Button>▶</Button>
 					</div>
 				</div>
 			</div>

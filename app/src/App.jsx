@@ -7,17 +7,14 @@ import Resume from "./routes/Resume";
 function App() {
 	return (
 		<>
-			<BrowserRouter>
+			<BrowserRouter basename="/hao_site">
 				<Routes>
-					<Route path="hao-site/Home" element={<Home />} />
-					<Route path="hao-site/Flag" element={<Flag />} />
-					<Route path="hao-site/Projects" element={<Projects />} />
-					<Route path="hao-site/Work" element={<Work />} />
-					<Route path="hao-site/Resume" element={<Resume />} />
-					<Route
-						path="*"
-						element={<Navigate to="hao-site/Home" replace />}
-					/>
+					<Route path="/Home" element={<Home />} />
+					<Route path="/Flag" element={<Flag />} />
+					<Route path="/Projects" element={<Projects />} />
+					<Route path="/Work" element={<Work />} />
+					<Route path="/Resume" element={<Resume />} />
+					<Route path="*" element={<Navigate to="/Home" replace />} />
 				</Routes>
 			</BrowserRouter>
 		</>

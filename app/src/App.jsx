@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router";
+import { HashRouter, Navigate, Route, Routes } from "react-router";
 import Home from "./routes/Home";
 import Flag from "./routes/Flag";
 import Projects from "./routes/Projects";
@@ -7,7 +7,7 @@ import Resume from "./routes/Resume";
 function App() {
 	return (
 		<>
-			<BrowserRouter basename="/hao_site">
+			<HashRouter basename="/hao_site">
 				<Routes>
 					<Route path="/Home" element={<Home />} />
 					<Route path="/Flag" element={<Flag />} />
@@ -16,7 +16,7 @@ function App() {
 					<Route path="/Resume" element={<Resume />} />
 					<Route path="*" element={<Navigate to="/Home" replace />} />
 				</Routes>
-			</BrowserRouter>
+			</HashRouter>
 		</>
 	);
 }

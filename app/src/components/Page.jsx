@@ -7,7 +7,7 @@ const Page = ({ children }) => {
 		<div
 			id="root-background"
 			className="block w-screen h-screen bg-cover"
-			style={{ backgroundImage: `url(${pageBg})` }}
+			// style={{ backgroundImage: `url(${pageBg})` }}
 		>
 			<div
 				id="page-container"
@@ -17,7 +17,7 @@ const Page = ({ children }) => {
 					id="page-content"
 					className={clsx(
 						"h-15/16 w-10/16 max-w-max-xl max-h-max-xl rounded-xl bg-hao-background/40 backdrop-blur-[12px] shadow-2xl p-8",
-						"max-md:size-full max-md:rounded-none max-md:p-0"
+						"max-md:size-full max-md:rounded-none max-md:p-0",
 					)}
 				>
 					{children}

@@ -66,7 +66,7 @@ const Work = () => {
 				<div
 					id="work-desktop-heading"
 					className={clsx(
-						"w-full h-6/20 flex justify-center items-center",
+						"w-full h-8/32 flex justify-center items-center",
 					)}
 				>
 					<div
@@ -87,7 +87,7 @@ const Work = () => {
 				<div
 					id="work-desktop-content"
 					className={clsx(
-						"w-full h-13/20 flex flex-col p-4 gap-8 overflow-y-scroll",
+						"w-full h-22/32 flex flex-col p-4 gap-8 overflow-y-scroll",
 					)}
 				>
 					{workList.map((work, id) => {
@@ -96,7 +96,7 @@ const Work = () => {
 				</div>
 				<div
 					id="work-desktop-footer"
-					className="w-full h-1/20 text-hao-text flex justify-center items-center p-4"
+					className="w-full h-2/32 text-hao-text flex justify-center items-center p-4"
 				>
 					<h2 className="text-xl text-hao-text/60">@HaoCheong</h2>
 				</div>

@@ -9,7 +9,7 @@ const Resume = () => {
 		<Page>
 			<div
 				id="resume-mobile-page"
-				className="md:hidden  flex justify-center items-center h-screen m-3"
+				className="md:hidden flex justify-center items-center h-screen m-3"
 			>
 				<h1
 					id="work-in-progress"
@@ -25,33 +25,44 @@ const Resume = () => {
 			>
 				<Navbar />
 				<div
-					id="resume-desktop-heading"
-					className={clsx(
-						"w-full h-6/20 flex justify-center items-center",
-					)}
+					id="resume-horizontal-section"
+					className="size-full flex flex-row gap-2 w-full h-24/32"
 				>
 					<div
-						id="resume-heading"
-						className={clsx("p-4 w-6/10 h-full flex flex-row")}
+						id="resume-desktop-heading"
+						className={clsx(
+							"w-1/2 h-full flex justify-center items-center",
+						)}
 					>
-						<img
-							src={logoAnimated}
-							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
-						/>
-						<div className="w-full flex justify-center items-center">
-							<h1 className="text-5xl p-4 text-hao-text text-center font-space-mono">
-								here is my resume.
-							</h1>
+						<div
+							id="resume-heading"
+							className={clsx(
+								"p-4 h-full w-6/10 flex flex-col items-center justify-center m-3 gap-4",
+							)}
+						>
+							<img
+								src={logoAnimated}
+								className="w-auto h-auto p-2 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
+							/>
+							<div className="w-full flex justify-center items-center h-1/5">
+								<h1 className="text-fluid-xl p-4 text-hao-text text-center font-space-mono">
+									here is my resume.
+								</h1>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div
-					id="resume-desktop-content"
-					className={clsx(
-						"w-full h-13/20 flex justify-center items-center",
-					)}
-				>
-					<embed id="resume" class="h-full w-6/10" src={resumePdf} />
+					<div
+						id="resume-desktop-content"
+						className={clsx(
+							"w-1/2 h-full flex justify-center items-center",
+						)}
+					>
+						<embed
+							id="resume"
+							class="h-full w-full"
+							src={resumePdf}
+						/>
+					</div>
 				</div>
 				<div
 					id="resume-desktop-footer"

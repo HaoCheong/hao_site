@@ -7,7 +7,7 @@ const Page = ({ children }) => {
 		<div
 			id="root-background"
 			className="block w-screen h-screen bg-cover"
-			// style={{ backgroundImage: `url(${pageBg})` }}
+			style={{ backgroundImage: `url(${pageBg})` }}
 		>
 			<div
 				id="page-container"

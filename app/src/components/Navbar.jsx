@@ -16,7 +16,7 @@ const Navbar = () => {
 			>
 				<h1
 					id="title"
-					className={clsx("text-8xl text-white font-space-mono")}
+					className={clsx("text-7xl text-white font-space-mono")}
 				>
 					/hao_site
 				</h1>

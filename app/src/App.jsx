@@ -7,7 +7,7 @@ import Resume from "./routes/Resume";
 function App() {
 	return (
 		<>
-			<HashRouter basename="/hao_site">
+			<HashRouter>
 				<Routes>
 					<Route path="/Home" element={<Home />} />
 					<Route path="/Flag" element={<Flag />} />

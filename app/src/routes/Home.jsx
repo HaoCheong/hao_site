@@ -20,7 +20,7 @@ const Home = () => {
 		<Page>
 			<div
 				id="project-mobile-page"
-				className="2xl:hidden size-full overflow-y-scroll"
+				className="md:hidden size-full overflow-y-scroll"
 			>
 				{/* <Placeholder label="Navbar" classSize="h-2/20 w-full" />
 
@@ -119,7 +119,7 @@ const Home = () => {
 				</div> */}
 				<div
 					id="home-mobile-page"
-					className="2xl:hidden flex justify-center items-center h-screen m-3"
+					className="md:hidden flex justify-center items-center h-screen m-3"
 				>
 					<h1
 						id="work-in-progress"
@@ -131,13 +131,13 @@ const Home = () => {
 			</div>
 			<div
 				id="project-desktop-page"
-				className="max-2xl:hidden size-full flex flex-col gap-4"
+				className="max-md:hidden size-full flex flex-col gap-4"
 			>
 				<Navbar />
 				<div
 					id="home-desktop-landing-section"
 					className={clsx(
-						"w-full h-6/20 flex justify-center items-center",
+						"w-full h-8/32 flex justify-center items-center",
 					)}
 				>
 					<div
@@ -157,7 +157,7 @@ const Home = () => {
 				</div>
 				<div
 					id="home-desktop-landing-summary"
-					className="w-full h-3/20 flex justify-center items-center "
+					className="w-full h-6/32 flex justify-center items-center "
 				>
 					<div
 						id="summary-central"
@@ -172,13 +172,13 @@ const Home = () => {
 				</div>
 				<div
 					id="home-desktop-landing-action"
-					className="w-full h-9/20 flex flex-row justify-center items-center "
+					className="w-full h-16/32 flex flex-row justify-center items-center "
 				>
 					<div
 						id="action-work-section"
 						className="flex flex-col gap-4 w-1/2 h-full p-4"
 					>
-						<h1 className="text-4xl text-hao-text font-space-mono">
+						<h1 className="text-2xl text-hao-text font-space-mono">
 							work experience
 						</h1>
 						<Button
@@ -207,7 +207,7 @@ const Home = () => {
 						id="action-contact-section"
 						className="flex flex-col gap-4 w-1/2 h-full p-4"
 					>
-						<h1 className="text-4xl text-hao-text font-space-mono">
+						<h1 className="text-2xl text-hao-text font-space-mono">
 							contact
 						</h1>
 						<Button
@@ -223,7 +223,7 @@ const Home = () => {
 							>
 								<img
 									src={mailIcon}
-									className="min-w-[30px] max-w-[45px] aspect-square invert"
+									className="w-[clamp(10px,3vw,45px)] aspect-square invert"
 								/>
 								<h2 className="h-full w-8/10 flex flex-col justify-center">
 									hao.cheong@outlook.com
@@ -244,7 +244,7 @@ const Home = () => {
 							>
 								<img
 									src={linkedinLogo}
-									className="min-w-[30px] max-w-[45px] aspect-square invert"
+									className="w-[clamp(10px,3vw,45px)] aspect-square invert"
 								/>
 								<h2 className="h-full w-8/10 flex flex-col justify-center">
 									linkedin
@@ -265,7 +265,7 @@ const Home = () => {
 							>
 								<img
 									src={githubSign}
-									className="min-w-[30px] max-w-[45px] aspect-square invert"
+									className="w-[clamp(10px,3vw,45px)] aspect-square invert"
 								/>
 								<h2 className="h-full w-8/10 flex flex-col justify-center">
 									github
@@ -276,7 +276,7 @@ const Home = () => {
 				</div>
 				<div
 					id="home-desktop-footer"
-					className="text-hao-text flex justify-center items-center p-4"
+					className="w-full h-2/32 text-hao-text flex justify-center items-center p-4"
 				>
 					<h2 className="text-xl text-hao-text/60">@HaoCheong</h2>
 				</div>

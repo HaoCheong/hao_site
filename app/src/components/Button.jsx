@@ -16,7 +16,7 @@ const Button = ({
 				id="button"
 				className={clsx(
 					buttonShape,
-					"relative group transition duration-200 items-center size-full text-xl rounded-xl",
+					"relative group transition duration-200 items-center size-full text-fluid-base rounded-xl",
 				)}
 				onClick={onClick}
 			>

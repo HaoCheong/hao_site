@@ -34,7 +34,7 @@ const ProjectCard = ({ key, project }) => {
 					</div>
 					<div
 						id="project-card-content"
-						className="h-full w-8/16 m-5"
+						className="h-full w-8/16 m-5 overflow-y-scroll"
 					>
 						{project.notes.map((notes, id) => {
 							return (

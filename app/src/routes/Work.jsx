@@ -48,7 +48,7 @@ const Work = () => {
 		<Page>
 			<div
 				id="work-mobile-page"
-				className="2xl:hidden flex justify-center items-center h-screen m-3"
+				className="md:hidden flex justify-center items-center h-screen m-3"
 			>
 				<h1
 					id="work-in-progress"
@@ -60,7 +60,7 @@ const Work = () => {
 
 			<div
 				id="work-desktop-page"
-				className="max-2xl:hidden size-full flex flex-col gap-4"
+				className="max-md:hidden size-full flex flex-col gap-4"
 			>
 				<Navbar />
 				<div

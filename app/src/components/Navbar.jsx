@@ -10,7 +10,7 @@ const Navbar = () => {
 			<div
 				id="nav-title-section"
 				className={clsx(
-					"w-5/10 h-full flex items-center",
+					"w-3/10 h-full flex items-center",
 					"max-md:w-full max-md:justify-center max-md:items-center",
 				)}
 			>
@@ -18,13 +18,13 @@ const Navbar = () => {
 					id="title"
 					className={clsx("text-7xl text-white font-space-mono")}
 				>
-					/hao_site
+					/hao
 				</h1>
 			</div>
 			<div
 				id="nav-page-navigation"
 				className={clsx(
-					"w-5/10 h-full flex flex-row gap-4 items-center",
+					"w-7/10 h-full flex flex-row gap-4 items-center",
 					"max-md:hidden",
 				)}
 			>

@@ -9,7 +9,7 @@ const Resume = () => {
 		<Page>
 			<div
 				id="resume-mobile-page"
-				className="2xl:hidden  flex justify-center items-center h-screen m-3"
+				className="md:hidden  flex justify-center items-center h-screen m-3"
 			>
 				<h1
 					id="work-in-progress"
@@ -21,7 +21,7 @@ const Resume = () => {
 
 			<div
 				id="resume-desktop-page"
-				className="max-2xl:hidden size-full flex flex-col gap-4"
+				className="max-md:hidden size-full flex flex-col gap-4"
 			>
 				<Navbar />
 				<div
@@ -51,11 +51,7 @@ const Resume = () => {
 						"w-full h-13/20 flex justify-center items-center",
 					)}
 				>
-					<embed
-						id="resume"
-						class="h-full w-6/10"
-						src={resumePdf}
-					/>
+					<embed id="resume" class="h-full w-6/10" src={resumePdf} />
 				</div>
 				<div
 					id="resume-desktop-footer"

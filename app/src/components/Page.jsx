@@ -6,12 +6,12 @@ const Page = ({ children }) => {
 	return (
 		<div
 			id="root-background"
-			className="block w-screen h-screen bg-cover"
-			style={{ backgroundImage: `url(${pageBg})` }}
+			className="relative w-screen h-screen overflow-hidden"
 		>
+			<img src={pageBg} className="absolute inset-0 w-full h-full object-cover" alt="" aria-hidden="true" />
 			<div
 				id="page-container"
-				className="size-full flex flex-col justify-center items-center"
+				className="relative size-full flex flex-col justify-center items-center"
 			>
 				<div
 					id="page-content"

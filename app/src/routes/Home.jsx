@@ -9,6 +9,8 @@ import mailIcon from "../assets/mail.png";
 import linkedinLogo from "../assets/linkedin-logo.png";
 import githubSign from "../assets/github-sign.png";
 import chevronDown from "../assets/chevron-down.svg";
+import WindowedBox from "../components/BuildingBox/WindowedBox";
+import AccentedWindowedBox from "../components/BuildingBox/AccentedWindowedBox";
 
 const Home = () => {
 	const navigate = useNavigate();
@@ -131,148 +133,138 @@ const Home = () => {
 			</div>
 			<div
 				id="project-desktop-page"
-				className="max-md:hidden size-full flex flex-col gap-4"
+				className="max-md:hidden size-full flex flex-col gap-6"
 			>
 				<Navbar />
 				<div
 					id="home-desktop-landing-section"
 					className={clsx(
-						"w-full h-8/32 flex justify-center items-center",
+						"w-full h-14/32 flex justify-center items-center",
 					)}
 				>
 					<div
 						id="landing-central"
-						className={clsx("p-4 w-6/10 h-full flex flex-row")}
+						className={clsx(
+							"pt-4 pb-4 w-full h-full flex flex-row gap-12",
+						)}
 					>
 						<img
 							src={logoAnimated}
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
-						<div className="w-full flex justify-center items-center">
-							<h1 className="text-5xl p-4 text-hao-text text-center font-space-mono">
-								hi, i'm hao cheong
+						<WindowedBox title="Biography">
+							<h1 className="text-5xl p-4 text-hao-text font-syne font-extrabold">
+								hi, i'm hao cheong_
 							</h1>
-						</div>
-					</div>
-				</div>
-				<div
-					id="home-desktop-landing-summary"
-					className="w-full h-6/32 flex justify-center items-center "
-				>
-					<div
-						id="summary-central"
-						className={clsx(
-							"p-4 w-8/10 h-full flex flex-row justify-center items-center rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary",
-						)}
-					>
-						<p className="text-2xl font-space-mono text-hao-background text-center">
-							{SUMMARY}
-						</p>
+							<h3 className="text-2xl p-4 text-hao-text font-grotesk font-extrabold">
+								{SUMMARY}
+							</h3>
+						</WindowedBox>
 					</div>
 				</div>
 				<div
 					id="home-desktop-landing-action"
-					className="w-full h-16/32 flex flex-row justify-center items-center "
+					className="w-full h-18/32 flex flex-row justify-center items-center gap-8"
 				>
-					<div
+					<AccentedWindowedBox
+						title="work experience"
 						id="action-work-section"
-						className="flex flex-col gap-4 w-1/2 h-full p-4"
+						variant="blue"
 					>
-						<h1 className="text-2xl text-hao-text font-space-mono">
-							work experience
-						</h1>
-						<Button
-							onClick={() => {
-								navigate("/Work");
-							}}
-						>
-							<h1>software engineer - atlassian</h1>
-						</Button>
-						<Button
-							onClick={() => {
-								navigate("/Work");
-							}}
-						>
-							<h1>application programmer - kanji it</h1>
-						</Button>
-						<Button
-							onClick={() => {
-								navigate("/Work");
-							}}
-						>
-							<h1>cyber security tutor - unsw</h1>
-						</Button>
-					</div>
-					<div
+						<div className="flex flex-col gap-6 h-full p-4">
+							<Button
+								onClick={() => {
+									navigate("/Work");
+								}}
+							>
+								<h1>software engineer - atlassian</h1>
+							</Button>
+							<Button
+								onClick={() => {
+									navigate("/Work");
+								}}
+							>
+								<h1>application programmer - kanji it</h1>
+							</Button>
+							<Button
+								onClick={() => {
+									navigate("/Work");
+								}}
+							>
+								<h1>cyber security tutor - unsw</h1>
+							</Button>
+						</div>
+					</AccentedWindowedBox>
+					<AccentedWindowedBox
+						title="contact"
 						id="action-contact-section"
-						className="flex flex-col gap-4 w-1/2 h-full p-4"
+						variant="orange"
 					>
-						<h1 className="text-2xl text-hao-text font-space-mono">
-							contact
-						</h1>
-						<Button
-							onClick={(e) => {
-								window.location.href =
-									"mailto:hao.cheong@outlook.com";
-								e.preventDefault();
-							}}
-						>
-							<div
-								id="email-group"
-								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
+						<div className="flex flex-col gap-4 w-full h-full p-4">
+							<Button
+								onClick={(e) => {
+									window.location.href =
+										"mailto:hao.cheong@outlook.com";
+									e.preventDefault();
+								}}
 							>
-								<img
-									src={mailIcon}
-									className="w-[clamp(10px,3vw,45px)] aspect-square invert"
-								/>
-								<h2 className="h-full w-8/10 flex flex-col justify-center">
-									hao.cheong@outlook.com
-								</h2>
-							</div>
-						</Button>
+								<div
+									id="email-group"
+									className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
+								>
+									<img
+										src={mailIcon}
+										className="w-[clamp(10px,3vw,45px)] aspect-square invert"
+									/>
+									<h2 className="h-full w-8/10 flex flex-col justify-center">
+										hao.cheong@outlook.com
+									</h2>
+								</div>
+							</Button>
 
-						<Button
-							onClick={(e) => {
-								window.location.href =
-									"https://www.linkedin.com/in/hao-cheong/";
-								e.preventDefault();
-							}}
-						>
-							<div
-								id="linkedin-group"
-								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
+							<Button
+								onClick={(e) => {
+									window.location.href =
+										"https://www.linkedin.com/in/hao-cheong/";
+									e.preventDefault();
+								}}
 							>
-								<img
-									src={linkedinLogo}
-									className="w-[clamp(10px,3vw,45px)] aspect-square invert"
-								/>
-								<h2 className="h-full w-8/10 flex flex-col justify-center">
-									linkedin
-								</h2>
-							</div>
-						</Button>
-						<Button
-							label="github"
-							onClick={(e) => {
-								window.location.href =
-									"https://github.com/HaoCheong";
-								e.preventDefault();
-							}}
-						>
-							<div
-								id="github-group"
-								className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
+								<div
+									id="linkedin-group"
+									className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
+								>
+									<img
+										src={linkedinLogo}
+										className="w-[clamp(10px,3vw,45px)] aspect-square invert"
+									/>
+									<h2 className="h-full w-8/10 flex flex-col justify-center">
+										linkedin
+									</h2>
+								</div>
+							</Button>
+							<Button
+								label="github"
+								onClick={(e) => {
+									window.location.href =
+										"https://github.com/HaoCheong";
+									e.preventDefault();
+								}}
 							>
-								<img
-									src={githubSign}
-									className="w-[clamp(10px,3vw,45px)] aspect-square invert"
-								/>
-								<h2 className="h-full w-8/10 flex flex-col justify-center">
-									github
-								</h2>
-							</div>
-						</Button>
-					</div>
+								<div
+									id="github-group"
+									className="flex flex-row gap-2 items-center p-3 h-full w-9/10"
+								>
+									<img
+										src={githubSign}
+										className="w-[clamp(10px,3vw,45px)] aspect-square invert"
+									/>
+									<h2 className="h-full w-8/10 flex flex-col justify-center">
+										github
+									</h2>
+								</div>
+							</Button>
+						</div>
+					</AccentedWindowedBox>
 				</div>
 				<div
 					id="home-desktop-footer"

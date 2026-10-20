@@ -3,13 +3,26 @@ import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 import ProjectCard from "../components/ProjectCard";
 import logoAnimated from "../assets/logo-animated.gif";
+import WindowedBox from "../components/BuildingBox/WindowedBox";
 
 const Projects = () => {
 	const projectList = [
 		{
+			title: "Convo Ink",
+			description: "Epaper edition of Convo",
+			start_date: "-",
+			status: "ongoing",
+			tech: ["TBD"],
+			notes: ["epaper device for sending limited chat"],
+			link: "https://github.com/HaoCheong",
+			logo_link: "",
+			logo_placeholder: "",
+		},
+		{
 			title: "Spenny",
 			description: "A budgetting application",
 			start_date: "-",
+			status: "complete",
 			tech: ["React", "FastAPI", "PostgreSQL", "SQLAlchemy"],
 			notes: [
 				"self hosted automation budgetting application",
@@ -24,6 +37,7 @@ const Projects = () => {
 			title: "Inkpress",
 			description: "A cli tool to help auto fill preset templates",
 			start_date: "-",
+			status: "complete",
 			tech: ["node"],
 			notes: [
 				"cli tool to help auto fill preset templates",
@@ -38,6 +52,7 @@ const Projects = () => {
 			description:
 				"Scrappy text chat app that only keeps the most recent 3 text",
 			start_date: "-",
+			status: "complete",
 			tech: ["python", "more python than I should have used"],
 			notes: [
 				"scrappy text chat app that only keeps the most recent 3 text messages",
@@ -48,9 +63,10 @@ const Projects = () => {
 			logo_placeholder: "💬",
 		},
 		{
-			title: "algorithm crash course",
+			title: "algo crash course",
 			description: "A collection of pdfs of algorithm notes from uni",
 			start_date: "-",
+			status: "complete",
 			tech: ["Handwritten"],
 			notes: [
 				"handwritten, bespoke notes on algorithm studies",
@@ -89,23 +105,27 @@ const Projects = () => {
 				>
 					<div
 						id="project-heading"
-						className={clsx("p-4 w-6/10 h-full flex flex-row")}
+						className={clsx(
+							"p-4 w-full h-full flex flex-row gap-12",
+						)}
 					>
 						<img
 							src={logoAnimated}
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
-						<div className="w-full flex justify-center items-center">
-							<h1 className="text-5xl p-4 text-hao-text text-center font-space-mono">
-								projects i'm proud of.
-							</h1>
-						</div>
+						<WindowedBox title="Decription">
+							<div className="size-full flex items-center justify-center p-4">
+								<h1 className="text-4xl text-hao-text font-syne font-extrabold">
+									Projects I have done_
+								</h1>
+							</div>
+						</WindowedBox>
 					</div>
 				</div>
 				<div
 					id="project-desktop-content"
 					className={clsx(
-						"w-full h-22/32 flex flex-col p-4 gap-8 overflow-y-scroll",
+						"w-full h-22/32 grid grid-cols-3 auto-rows-[20rem] content-start p-4 gap-8 overflow-y-scroll",
 					)}
 				>
 					{projectList.map((project, id) => {

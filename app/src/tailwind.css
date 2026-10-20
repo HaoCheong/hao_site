@@ -6,8 +6,19 @@
     --color-hao-primary: #6cc030;
     --color-hao-secondary: #4d7333;
     --color-hao-accent: #7dc34c;
+    
     --font-space-mono: 'Sora', 'sans-serif';
     --font-space-mono: 'Space Mono', 'sans-serif';
+    --font-syne: 'Syne', 'sans-serif';
+    --font-grotesk: 'Space Grotesk', 'sans-serif';
+
+    --color-neubrutal-yellow: #FFD23F;
+    --color-neubrutal-red: #FF6B6B;
+    --color-neubrutal-blue: #74B9FF;
+    --color-neubrutal-orange: #FFA552;
+    --color-neubrutal-lavender: #B8A9FA;
+    --color-neubrutal-green: #6BCB77;
+
 
     --text-fluid-sm: clamp(0.875rem, 1.5vw, 1rem);
     --text-fluid-base: clamp(1rem, 2vw, 1.25rem);

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Navbar from "./Navbar";
-import pageBg from "../assets/page-background-3.svg";
+import pageBg from "../assets/page-background-4.jpg";
 
 const Page = ({ children }) => {
 	return (
@@ -21,7 +21,7 @@ const Page = ({ children }) => {
 				<div
 					id="page-content"
 					className={clsx(
-						"h-15/16 w-12/16 max-w-max-xl max-h-max-xl rounded-xl bg-hao-background/40 backdrop-blur-[12px] shadow-2xl p-8",
+						"h-15/16 w-12/16 max-w-max-xl max-h-max-xl rounded-xl bg-hao-primary/50 backdrop-blur-[12px] shadow-2xl p-8",
 						"max-md:size-full max-md:rounded-none max-md:p-0",
 					)}
 				>

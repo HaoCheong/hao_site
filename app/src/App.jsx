@@ -4,6 +4,7 @@ import Flag from "./routes/Flag";
 import Projects from "./routes/Projects";
 import Work from "./routes/Work";
 import Resume from "./routes/Resume";
+import Blog from "./routes/Blog";
 function App() {
 	return (
 		<>
@@ -14,6 +15,7 @@ function App() {
 					<Route path="/Projects" element={<Projects />} />
 					<Route path="/Work" element={<Work />} />
 					<Route path="/Resume" element={<Resume />} />
+					<Route path="/Blog" element={<Blog />} />
 					<Route path="*" element={<Navigate to="/Home" replace />} />
 				</Routes>
 			</HashRouter>

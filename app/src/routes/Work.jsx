@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 import WorkCard from "../components/WorkCard";
 import logoAnimated from "../assets/logo-animated.gif";
+import WindowedBox from "../components/BuildingBox/WindowedBox";
 
 const Work = () => {
 	const workList = [
@@ -14,6 +15,7 @@ const Work = () => {
 			goals: [
 				"Java/Kotlin development for Server to Cloud App Migration",
 			],
+			status: "current",
 		},
 		{
 			company: "Kanji IT",
@@ -25,6 +27,7 @@ const Work = () => {
 				"Full Stack application development for their automated SMS system with Internal interface for Support team",
 				"Operation Health and Safety Staff Management Synchroniser",
 			],
+			status: "previous",
 		},
 		{
 			company: "UNSW",
@@ -34,6 +37,7 @@ const Work = () => {
 			goals: [
 				"Facilitating discussions between students for security hypotheticals",
 			],
+			status: "previous",
 		},
 		{
 			company: "UNSW",
@@ -41,6 +45,7 @@ const Work = () => {
 			start_date: "Sept/2022",
 			end_date: "Jan/2024",
 			goals: ["Educating students on Frontend Fundamentals"],
+			status: "previous",
 		},
 	];
 
@@ -71,17 +76,21 @@ const Work = () => {
 				>
 					<div
 						id="work-heading"
-						className={clsx("p-4 w-6/10 h-full flex flex-row")}
+						className={clsx(
+							"p-4 w-full h-full flex flex-row gap-12",
+						)}
 					>
 						<img
 							src={logoAnimated}
 							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
 						/>
-						<div className="w-full flex justify-center items-center">
-							<h1 className="text-5xl p-4 text-hao-text text-center font-space-mono">
-								work i have done.
-							</h1>
-						</div>
+						<WindowedBox title="Decription">
+							<div className="size-full flex items-center justify-center p-4">
+								<h1 className="text-4xl text-hao-text font-syne font-extrabold">
+									Places I have worked at_
+								</h1>
+							</div>
+						</WindowedBox>
 					</div>
 				</div>
 				<div
@@ -90,9 +99,23 @@ const Work = () => {
 						"w-full h-22/32 flex flex-col p-4 gap-8 overflow-y-scroll",
 					)}
 				>
-					{workList.map((work, id) => {
-						return <WorkCard key={id} work={work} />;
-					})}
+					<div className="size-full flex flex-row gap-8 pt-4 pl-4 pr-4">
+						<div className="w-2/3 h-80" id="current-work">
+							<WorkCard work={workList[0]} />
+						</div>
+						<div className="w-1/3 h-80" id="sub-work-1">
+							<WorkCard work={workList[1]} />
+						</div>
+					</div>
+					<div
+						className={clsx(
+							"w-full h-22/32 grid grid-cols-3 auto-rows-[20rem] content-start p-4 gap-8",
+						)}
+					>
+						{workList.splice(2).map((work, id) => {
+							return <WorkCard key={id} work={work} />;
+						})}
+					</div>
 				</div>
 				<div
 					id="work-desktop-footer"

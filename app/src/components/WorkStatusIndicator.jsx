@@ -5,7 +5,7 @@ const WorkStatusIndicator = ({ variant, backdropOn = true }) => {
 
 	if (variant === "current") {
 		fillVariant = `green`;
-		text = "Complete";
+		text = "Current";
 	} else if (variant === "previous") {
 		fillVariant = `yellow`;
 		text = "Historic";

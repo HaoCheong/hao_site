@@ -16,7 +16,9 @@ const Navbar = () => {
 			>
 				<h1
 					id="title"
-					className={clsx("text-7xl text-white font-space-mono")}
+					className={clsx(
+						"text-8xl text-white font-grotesk font-extrabold",
+					)}
 				>
 					/hao
 				</h1>
@@ -51,6 +53,12 @@ const Navbar = () => {
 					active={location.pathname === "/Resume"}
 				>
 					/resume
+				</Button>
+				<Button
+					onClick={() => navigate("/Blog")}
+					active={location.pathname === "/Blog"}
+				>
+					../blog
 				</Button>
 			</div>
 		</div>

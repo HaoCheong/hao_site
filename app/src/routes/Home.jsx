@@ -270,7 +270,9 @@ const Home = () => {
 					id="home-desktop-footer"
 					className="w-full h-2/32 text-hao-text flex justify-center items-center p-4"
 				>
-					<h2 className="text-xl text-hao-text/60">@HaoCheong</h2>
+					<h2 className="text-xl text-hao-text/60">
+						@hao cheong 2026 · made with my two hands
+					</h2>
 				</div>
 			</div>
 		</Page>

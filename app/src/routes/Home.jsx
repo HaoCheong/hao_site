@@ -9,8 +9,8 @@ import mailIcon from "../assets/mail.png";
 import linkedinLogo from "../assets/linkedin-logo.png";
 import githubSign from "../assets/github-sign.png";
 import chevronDown from "../assets/chevron-down.svg";
-import WindowedBox from "../components/WindowedBox";
-import AccentedWindowedBox from "../components/AccentedWindowedBox";
+import WindowedBox from "../components/BuildingBox/WindowedBox";
+import AccentedWindowedBox from "../components/BuildingBox/AccentedWindowedBox";
 
 const Home = () => {
 	const navigate = useNavigate();
@@ -145,7 +145,7 @@ const Home = () => {
 					<div
 						id="landing-central"
 						className={clsx(
-							"p-4 w-full h-full flex flex-row gap-12",
+							"pt-4 pb-4 w-full h-full flex flex-row gap-12",
 						)}
 					>
 						<img
@@ -164,7 +164,7 @@ const Home = () => {
 				</div>
 				<div
 					id="home-desktop-landing-action"
-					className="w-full h-16/32 flex flex-row justify-center items-center gap-8"
+					className="w-full h-18/32 flex flex-row justify-center items-center gap-8"
 				>
 					<AccentedWindowedBox
 						title="work experience"

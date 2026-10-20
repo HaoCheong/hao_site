@@ -11,14 +11,14 @@ const PopBox = ({
 				id="pop-box-backdrop"
 				className={clsx(
 					backdropStyle,
-					"relative items-center size-full text-fluid-base -z-1",
+					"relative items-center size-full text-fluid-base",
 				)}
 			>
 				<div
 					id="pop-box-content"
 					className={clsx(
 						contentStyle,
-						"absolute bottom-3 right-3 w-full h-full z-1",
+						"absolute bottom-2 right-2 w-full h-full z-1",
 					)}
 				>
 					{children}

@@ -6,7 +6,7 @@ const MobilePage = ({ children }) => {
 	return (
 		<div
 			id="root-background"
-			className="max-[350px]:hidden min-[1000px]:hidden relative w-screen h-screen overflow-hidden"
+			className="max-[350px]:hidden min-[1170px]:hidden relative w-screen h-screen overflow-hidden"
 		>
 			<img
 				src={pageBg}

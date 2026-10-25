@@ -6,7 +6,7 @@ const Page = ({ children }) => {
 	return (
 		<div
 			id="root-background"
-			className="max-[999px]:hidden [@media(max-height:650px)]:hidden relative w-screen h-screen overflow-hidden "
+			className="max-[1169px]:hidden [@media(max-height:650px)]:hidden relative w-screen h-screen overflow-hidden "
 		>
 			<img
 				src={pageBg}
@@ -21,7 +21,7 @@ const Page = ({ children }) => {
 				<div
 					id="page-content"
 					className={clsx(
-						"h-15/16 w-15/16 max-w-max-xl max-h-max-xl rounded-xl bg-hao-primary/50 backdrop-blur-[12px] shadow-2xl p-8",
+						"h-15/16 w-14/16 max-w-max-xl max-h-max-xl rounded-xl bg-hao-primary/50 backdrop-blur-[12px] shadow-2xl p-8",
 						"max-md:size-full max-md:rounded-none max-md:p-0",
 					)}
 				>

@@ -6,7 +6,7 @@ const Page = ({ children }) => {
 	return (
 		<div
 			id="root-background"
-			className="relative w-screen h-screen overflow-hidden"
+			className="max-[1039px]:hidden [@media(max-height:650px)]:hidden relative w-screen h-screen overflow-hidden "
 		>
 			<img
 				src={pageBg}

@@ -4,6 +4,8 @@ import Page from "../components/Page";
 import ProjectCard from "../components/ProjectCard";
 import logoAnimated from "../assets/logo-animated.gif";
 import WindowedBox from "../components/BuildingBox/WindowedBox";
+import MobilePage from "../components/MobilePage";
+import TooSmallPage from "../components/TooSmallPage";
 
 const Projects = () => {
 	const projectList = [
@@ -79,69 +81,94 @@ const Projects = () => {
 	];
 
 	return (
-		<Page>
-			<div
-				id="project-mobile-page"
-				className="md:hidden flex justify-center items-center h-screen m-3"
-			>
+		<>
+			<TooSmallPage>
+				<div
+					id="too-small-content"
+					className="size-full flex flex-col gap-4 items-center justify-center"
+				>
+					<h1 className="text-hao-text font-mono font-bold">
+						you right now:
+					</h1>
+					<img
+						src={squintGif}
+						alt="Gif of a man squinting a piece of paper"
+						className="w-80 h-80"
+					/>
+				</div>
+			</TooSmallPage>
+			<MobilePage>
 				<h1
 					id="work-in-progress"
-					className="font-space-mono text-3xl text-hao-text text-center"
+					className="font-space-mono text-3xl text-hao-text text-center "
 				>
-					Project Page: current a work in progress 🙇‍♂️
+					Project Page: currently a work in progress 🙇‍♂️
 				</h1>
-			</div>
-
-			<div
-				id="project-desktop-page"
-				className="max-md:hidden size-full flex flex-col gap-4"
-			>
-				<Navbar />
+			</MobilePage>
+			<Page>
 				<div
-					id="project-desktop-heading"
-					className={clsx(
-						"w-full h-8/32 flex justify-center items-center",
-					)}
+					id="project-mobile-page"
+					className="md:hidden flex justify-center items-center h-screen m-3"
 				>
+					<h1
+						id="work-in-progress"
+						className="font-space-mono text-3xl text-hao-text text-center"
+					>
+						Project Page: current a work in progress 🙇‍♂️
+					</h1>
+				</div>
+
+				<div
+					id="project-desktop-page"
+					className="max-md:hidden size-full flex flex-col gap-4"
+				>
+					<Navbar />
 					<div
-						id="project-heading"
+						id="project-desktop-heading"
 						className={clsx(
-							"p-4 w-full h-full flex flex-row gap-12",
+							"w-full h-8/32 flex justify-center items-center",
 						)}
 					>
-						<img
-							src={logoAnimated}
-							className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
-						/>
-						<WindowedBox title="Decription">
-							<div className="size-full flex items-center justify-center p-4">
-								<h1 className="text-4xl text-hao-text font-syne font-extrabold">
-									Projects I have done_
-								</h1>
-							</div>
-						</WindowedBox>
+						<div
+							id="project-heading"
+							className={clsx(
+								"p-4 w-full h-full flex flex-row gap-12",
+							)}
+						>
+							<img
+								src={logoAnimated}
+								className="w-auto h-full p-3 aspect-square object-cover rounded-xl bg-hao-text shadow-[10px_10px_0px_0px_#6cc030] border-3 border-solid border-hao-primary"
+							/>
+							<WindowedBox title="Decription">
+								<div className="size-full flex items-center justify-center p-4">
+									<h1 className="text-4xl text-hao-text font-syne font-extrabold">
+										Projects I have done_
+									</h1>
+								</div>
+							</WindowedBox>
+						</div>
+					</div>
+					<div
+						id="project-desktop-content"
+						className={clsx(
+							"w-full h-22/32 grid grid-cols-3 auto-rows-[20rem] content-start p-4 gap-8 overflow-y-scroll",
+						)}
+					>
+						{projectList.map((project, id) => {
+							return <ProjectCard key={id} project={project} />;
+						})}
+					</div>
+					<div
+						id="project-desktop-footer"
+						className="w-full h-2/32 text-hao-text flex justify-center items-center p-4"
+					>
+						<h2 className="text-xl text-hao-text/60">
+							@hao cheong 2026 · made with my two hands
+						</h2>
 					</div>
 				</div>
-				<div
-					id="project-desktop-content"
-					className={clsx(
-						"w-full h-22/32 grid grid-cols-3 auto-rows-[20rem] content-start p-4 gap-8 overflow-y-scroll",
-					)}
-				>
-					{projectList.map((project, id) => {
-						return <ProjectCard key={id} project={project} />;
-					})}
-				</div>
-				<div
-					id="project-desktop-footer"
-					className="w-full h-2/32 text-hao-text flex justify-center items-center p-4"
-				>
-					<h2 className="text-xl text-hao-text/60">
-						@hao cheong 2026 · made with my two hands
-					</h2>
-				</div>
-			</div>
-		</Page>
+			</Page>
+		</>
 	);
 };
 

@@ -6,6 +6,7 @@ import logoAnimated from "../assets/logo-animated.gif";
 import WindowedBox from "../components/BuildingBox/WindowedBox";
 import MobilePage from "../components/MobilePage";
 import TooSmallPage from "../components/TooSmallPage";
+import squintGif from "../assets/ken-jeong-squinting.gif";
 
 const Resume = () => {
 	return (

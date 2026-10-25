@@ -87,9 +87,6 @@ const Projects = () => {
 					id="too-small-content"
 					className="size-full flex flex-col gap-4 items-center justify-center"
 				>
-					<h1 className="text-hao-text font-mono font-bold">
-						you right now:
-					</h1>
 					<img
 						src={squintGif}
 						alt="Gif of a man squinting a piece of paper"

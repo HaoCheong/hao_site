@@ -13,6 +13,7 @@ import WindowedBox from "../components/BuildingBox/WindowedBox";
 import AccentedWindowedBox from "../components/BuildingBox/AccentedWindowedBox";
 import MobilePage from "../components/MobilePage";
 import TooSmallPage from "../components/TooSmallPage";
+import squintGif from "../assets/ken-jeong-squinting.gif";
 
 const Home = () => {
 	const navigate = useNavigate();

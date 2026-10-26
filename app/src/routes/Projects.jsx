@@ -146,7 +146,7 @@ const Projects = () => {
 							className={clsx(
 								"w-full shrink-0 flex flex-col gap-4 justify-center",
 								"min-[300px]:h-25/20",
-								"min-[400px]:h-18/20",
+								"min-[400px]:h-22/20",
 								"min-[600px]:h-12/20",
 							)}
 						>

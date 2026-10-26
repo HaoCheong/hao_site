@@ -1,13 +1,22 @@
 import clsx from "clsx";
+import Button from "../components/Button";
 import Navbar from "../components/Navbar";
 import Page from "../components/Page";
-import ProjectCard from "../components/ProjectCard";
+import Placeholder from "../components/Placeholder";
+import { useNavigate } from "react-router";
 import logoAnimated from "../assets/logo-animated.gif";
+import mailIcon from "../assets/mail.png";
+import linkedinLogo from "../assets/linkedin-logo.png";
+import githubSign from "../assets/github-sign.png";
+import chevronDown from "../assets/chevron-down.svg";
 import WindowedBox from "../components/BuildingBox/WindowedBox";
+import AccentedWindowedBox from "../components/BuildingBox/AccentedWindowedBox";
 import MobilePage from "../components/MobilePage";
 import TooSmallPage from "../components/TooSmallPage";
 import squintGif from "../assets/ken-jeong-squinting.gif";
-
+import MobileNavbar from "../components/MobileNavbar";
+import AnimatedLogo from "../components/AnimatedLogo";
+import ProjectCard from "../components/ProjectCard";
 const Projects = () => {
 	const projectList = [
 		{
@@ -96,29 +105,64 @@ const Projects = () => {
 				</div>
 			</TooSmallPage>
 			<MobilePage>
-				<h1
-					id="work-in-progress"
-					className="font-space-mono text-3xl text-hao-text text-center "
+				<div
+					id="project-mobile-content"
+					className="w-full h-full overflow-y-scroll p-2"
 				>
-					Project Page: currently a work in progress 🙇‍♂️
-				</h1>
+					<div
+						id="project-mobile-content-inner"
+						className="flex flex-col gap-8 w-full h-2/1"
+					>
+						<div
+							id="project-mobile-navbar"
+							className="w-full h-3/40 shrink-0"
+						>
+							<MobileNavbar />
+						</div>
+						<div
+							id="project-mobile-logo"
+							className="w-full h-6/40 shrink-0 flex justify-center"
+						>
+							<AnimatedLogo />
+						</div>
+
+						<div
+							id="project-mobile-description"
+							className={clsx(
+								"w-full shrink-0 flex justify-center",
+								"min-[300px]:h-7/40",
+								"min-[400px]:h-6/40",
+								"min-[700px]:h-4/40",
+							)}
+						>
+							<WindowedBox title="description">
+								<h1 className="text-4xl text-hao-text font-syne font-extrabold p-4">
+									Projects I have done_
+								</h1>
+							</WindowedBox>
+						</div>
+						<div
+							id="project-mobile-project-list"
+							className={clsx(
+								"w-full shrink-0 flex flex-col gap-4 justify-center",
+								"min-[300px]:h-25/20",
+								"min-[400px]:h-18/20",
+								"min-[600px]:h-12/20",
+							)}
+						>
+							{projectList.map((project, id) => {
+								return (
+									<ProjectCard key={id} project={project} />
+								);
+							})}
+						</div>
+					</div>
+				</div>
 			</MobilePage>
 			<Page>
 				<div
-					id="project-mobile-page"
-					className="md:hidden flex justify-center items-center h-screen m-3"
-				>
-					<h1
-						id="work-in-progress"
-						className="font-space-mono text-3xl text-hao-text text-center"
-					>
-						Project Page: current a work in progress 🙇‍♂️
-					</h1>
-				</div>
-
-				<div
 					id="project-desktop-page"
-					className="max-md:hidden size-full flex flex-col gap-4"
+					className="size-full flex flex-col gap-4"
 				>
 					<Navbar />
 					<div

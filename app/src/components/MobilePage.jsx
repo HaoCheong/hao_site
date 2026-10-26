@@ -6,7 +6,7 @@ const MobilePage = ({ children }) => {
 	return (
 		<div
 			id="root-background"
-			className="max-[350px]:hidden min-[1000px]:hidden relative w-screen h-screen overflow-hidden"
+			className="max-[350px]:hidden min-[1170px]:hidden relative w-screen h-screen"
 		>
 			<img
 				src={pageBg}
@@ -21,7 +21,7 @@ const MobilePage = ({ children }) => {
 				<div
 					id="page-content"
 					className={clsx(
-						"h-full w-15/16 min-w-[355px] min-h-[355px] bg-hao-primary/50 backdrop-blur-md shadow-2xl p-8",
+						"h-full w-15/16 min-w-[355px] min-h-[355px] bg-hao-primary/50 backdrop-blur-md shadow-2xl p-4",
 					)}
 				>
 					{children}

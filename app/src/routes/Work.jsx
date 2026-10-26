@@ -7,6 +7,8 @@ import WindowedBox from "../components/BuildingBox/WindowedBox";
 import MobilePage from "../components/MobilePage";
 import TooSmallPage from "../components/TooSmallPage";
 import squintGif from "../assets/ken-jeong-squinting.gif";
+import MobileNavbar from "../components/MobileNavbar";
+import AnimatedLogo from "../components/AnimatedLogo";
 
 const Work = () => {
 	const workList = [
@@ -67,12 +69,57 @@ const Work = () => {
 				</div>
 			</TooSmallPage>
 			<MobilePage>
-				<h1
-					id="work-in-progress"
-					className="font-space-mono text-3xl text-hao-text text-center "
+				<div
+					id="work-mobile-content"
+					className="w-full h-full overflow-y-scroll p-2"
 				>
-					Work Page: currently a work in progress 🙇‍♂️
-				</h1>
+					<div
+						id="work-mobile-content-inner"
+						className="flex flex-col gap-8 w-full h-2/1"
+					>
+						<div
+							id="work-mobile-navbar"
+							className="w-full h-3/40 shrink-0"
+						>
+							<MobileNavbar />
+						</div>
+						<div
+							id="work-mobile-logo"
+							className="w-full h-6/40 shrink-0 flex justify-center"
+						>
+							<AnimatedLogo />
+						</div>
+
+						<div
+							id="work-mobile-description"
+							className={clsx(
+								"w-full shrink-0 flex justify-center",
+								"min-[300px]:h-7/40",
+								"min-[400px]:h-6/40",
+								"min-[700px]:h-4/40",
+							)}
+						>
+							<WindowedBox title="description">
+								<h1 className="text-4xl text-hao-text font-syne font-extrabold p-4">
+									Places I have worked at_
+								</h1>
+							</WindowedBox>
+						</div>
+						<div
+							id="work-mobile-work-list"
+							className={clsx(
+								"w-full shrink-0 flex flex-col gap-4 justify-center",
+								"min-[300px]:h-25/20",
+								"min-[400px]:h-18/20",
+								"min-[600px]:h-12/20",
+							)}
+						>
+							{workList.map((work, id) => {
+								return <WorkCard key={id} work={work} />;
+							})}
+						</div>
+					</div>
+				</div>
 			</MobilePage>
 			<Page>
 				<div

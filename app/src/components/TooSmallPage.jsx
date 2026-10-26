@@ -6,7 +6,7 @@ const TooSmallPage = ({ children }) => {
 	return (
 		<div
 			id="root-background"
-			className="[@media(min-width:330px)_and_(min-height:330px)]:hidden relative w-screen h-screen overflow-hidden"
+			className="[@media(min-width:350px)_and_(min-height:350px)]:hidden relative w-screen h-screen overflow-hidden"
 		>
 			<img
 				src={pageBg}

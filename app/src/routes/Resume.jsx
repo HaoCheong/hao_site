@@ -7,6 +7,8 @@ import WindowedBox from "../components/BuildingBox/WindowedBox";
 import MobilePage from "../components/MobilePage";
 import TooSmallPage from "../components/TooSmallPage";
 import squintGif from "../assets/ken-jeong-squinting.gif";
+import AnimatedLogo from "../components/AnimatedLogo";
+import MobileNavbar from "../components/MobileNavbar";
 
 const Resume = () => {
 	return (
@@ -24,26 +26,58 @@ const Resume = () => {
 				</div>
 			</TooSmallPage>
 			<MobilePage>
-				<h1
-					id="work-in-progress"
-					className="font-space-mono text-3xl text-hao-text text-center "
+				<div
+					id="resume-mobile-content"
+					className="w-full h-full overflow-y-scroll p-2"
 				>
-					Resume Page: currently a work in progress 🙇‍♂️
-				</h1>
+					<div
+						id="resume-mobile-content-inner"
+						className="flex flex-col gap-8 w-full h-2/1"
+					>
+						<div
+							id="resume-mobile-navbar"
+							className="w-full h-3/40 shrink-0"
+						>
+							<MobileNavbar />
+						</div>
+						<div
+							id="resume-mobile-logo"
+							className="w-full h-6/40 shrink-0 flex justify-center"
+						>
+							<AnimatedLogo />
+						</div>
+
+						<div
+							id="resume-mobile-description"
+							className={clsx(
+								"w-full shrink-0 flex justify-center",
+								"min-[300px]:h-7/40",
+								"min-[400px]:h-6/40",
+								"min-[700px]:h-4/40",
+							)}
+						>
+							<WindowedBox title="description">
+								<h1 className="text-4xl text-hao-text font-syne font-extrabold p-4">
+									Here is my resume_
+								</h1>
+							</WindowedBox>
+						</div>
+						<div
+							id="resume-mobile-content"
+							className={clsx(
+								"w-full h-22/32 flex justify-center items-center",
+							)}
+						>
+							<embed
+								id="resume"
+								class="h-full w-full"
+								src={resumePdf}
+							/>
+						</div>
+					</div>
+				</div>
 			</MobilePage>
 			<Page>
-				<div
-					id="resume-mobile-page"
-					className="md:hidden flex justify-center items-center h-screen m-3"
-				>
-					<h1
-						id="resume-in-progress"
-						className="font-space-mono text-3xl text-hao-text text-center"
-					>
-						Work Page: currently a resume in progress 🙇‍♂️
-					</h1>
-				</div>
-
 				<div
 					id="resume-desktop-page"
 					className="max-md:hidden size-full flex flex-col gap-4"
@@ -68,7 +102,7 @@ const Resume = () => {
 							<WindowedBox title="Decription">
 								<div className="size-full flex items-center justify-center p-4">
 									<h1 className="text-4xl text-hao-text font-syne font-extrabold">
-										Here is my resume
+										Here is my resume_
 									</h1>
 								</div>
 							</WindowedBox>

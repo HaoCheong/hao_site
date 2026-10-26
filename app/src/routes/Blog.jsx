@@ -6,6 +6,8 @@ import squintGif from "../assets/ken-jeong-squinting.gif";
 import WindowedBox from "../components/BuildingBox/WindowedBox";
 import MobilePage from "../components/MobilePage";
 import TooSmallPage from "../components/TooSmallPage";
+import MobileNavbar from "../components/MobileNavbar";
+import AnimatedLogo from "../components/AnimatedLogo";
 
 const Blog = () => {
 	return (
@@ -23,26 +25,56 @@ const Blog = () => {
 				</div>
 			</TooSmallPage>
 			<MobilePage>
-				<h1
-					id="work-in-progress"
-					className="font-space-mono text-3xl text-hao-text text-center "
+				<div
+					id="blog-mobile-content"
+					className="w-full h-full overflow-y-scroll p-2"
 				>
-					Blog Page: currently a work in progress 🙇‍♂️
-				</h1>
+					<div
+						id="blog-mobile-content-inner"
+						className="flex flex-col gap-8 w-full h-1/1"
+					>
+						<div
+							id="blog-mobile-navbar"
+							className="w-full h-3/20 shrink-0"
+						>
+							<MobileNavbar />
+						</div>
+						<div
+							id="blog-mobile-logo"
+							className="w-full h-6/20 shrink-0 flex justify-center"
+						>
+							<AnimatedLogo />
+						</div>
+
+						<div
+							id="blog-mobile-description"
+							className={clsx(
+								"w-full shrink-0 flex justify-center",
+								"min-[300px]:h-7/20",
+								"min-[400px]:h-6/20",
+								"min-[700px]:h-4/20",
+							)}
+						>
+							<WindowedBox title="description">
+								<h1 className="text-4xl text-hao-text font-syne font-extrabold p-4">
+									Here is my blog_
+								</h1>
+							</WindowedBox>
+						</div>
+						<div
+							id="blog-mobile-content"
+							className={clsx(
+								"w-full h-2/20 shrink-0 flex flex-col gap-4 justify-center items-center",
+							)}
+						>
+							<h1 className="text-3xl font-extrabold font-syne text-hao-text">
+								Work in progress...
+							</h1>
+						</div>
+					</div>
+				</div>
 			</MobilePage>
 			<Page>
-				<div
-					id="blog-mobile-page"
-					className="md:hidden flex justify-center items-center h-screen m-3"
-				>
-					<h1
-						id="blog-in-progress"
-						className="font-space-mono text-3xl text-hao-text text-center"
-					>
-						Blog Page: currently a blog in progress 🙇‍♂️
-					</h1>
-				</div>
-
 				<div
 					id="blog-desktop-page"
 					className="max-md:hidden size-full flex flex-col gap-4"
